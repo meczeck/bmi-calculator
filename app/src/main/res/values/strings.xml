@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="calc_button">CALCULATE BMI</string>
+    <string name="weight_field_hint_text">Enter Weight (Kg)</string>
+    <string name="height_field_hint_text">Enter Height (cm)</string>
+    <string name="dialog_title">Results</string>
+    <string name="exception_error">Invalid Input, Try Again</string>
+    <string name="weight_is_null_message">Please, enter weight!</string>
+    <string name="height_is_null_message">Please, enter height!</string>
+    <string name="under_weight">Underweight</string>
+    <string name="healthy_weight">Healthy Weight</string>
+    <string name="over_weight">Overweight</string>
+    <string name="obese">Obese</string>
+    <string name="sev_obese">Severely  Obese</string>
+    <string name="morb_obese">Morbidly Obese</string>
+</resources>
