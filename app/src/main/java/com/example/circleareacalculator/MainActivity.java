@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //To get EditText for Weight from xml
+        //To get EditText View for Weight from xml
         editTextWeight = (EditText) findViewById(R.id.editTextWeight);
-        //To get EditText for Height from xml
+        //To get EditText View for Height from xml
         editTextHeight = (EditText) findViewById(R.id.editTextHeight);
-        //To get Button Component from xml
+        //To get Button View from xml
         Button calcButton = (Button) findViewById(R.id.calculateBmiButton);
         //To create Alert dialog object
         builder = new AlertDialog.Builder(this);
@@ -44,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public static int getStringIdentifier(Context context, String name) {
-        return context.getResources().getIdentifier(name, "string", context.getPackageName());
-    }
-
     public void calculateBmi() {
         try {
             if (editTextWeight.getText().toString().isEmpty()) {
@@ -57,14 +53,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), R.string.height_is_null_message, Toast.LENGTH_SHORT).show();
             }
             else {
-                //To convert editText values to integers
+                //To convert editText values to Doubles
                 Double userWeight = Double.parseDouble(editTextWeight.getText().toString());
                 Double userHeight = Double.parseDouble(editTextHeight.getText().toString()) / 100;
 
-                //To calculate Circle area
+                //To calculate BMI value
                 Double bmiValue = userWeight / (userHeight * userHeight);
 
-//To check the value of BMI
+                //To check the value of BMI
                 if(bmiValue < 18.5) {
                     bmiResult = "Underweight";
                 }
